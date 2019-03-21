@@ -655,6 +655,10 @@ Siehe diese .md-Datei.
 
 ## Sicherheitsaspekte sind implementiert
 
+
+
+<a href="https://imgur.com/xhMq4EY"><img src="https://i.imgur.com/xhMq4EY.jpg" title="source: imgur.com" /></a>
+
 ### Firewall eingerichtet inkl. Rules
 
 In meinem Vagrantfile sieht man, dass eine Ubuntu VM mit einer Firewall Reproxy installiert wird. Die Ports habe ich so abgeändert, dass jegliche Kommunikation von der IP 10.0.2.2 zugelassen wird. Ebenfalls wird TCP durch den Port 80 zugelassen.
