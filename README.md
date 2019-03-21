@@ -384,11 +384,17 @@ Den zuvor kopierten Key mit *CTRL + V* einfügen und auf **Add SSH key** klicken
 
 Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
 
-```
+```bash
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsybLPmHh/P+I1yhzvK+JvqT1Q6ZZyuscPVmoe8fLWwvSKI5jwZ6MttWfitqkfCqmnVw87KDY3p9vuUhu5V8IFBIYmfRASom65jMkq18TpYLtqG9IwsN9aqfCWVk73d0WQdJAVaU6PQUcl0NZUd8jBqVHZb0AOfPaEmER0Jnyz+D4Wy5LtszojjsW8oFnpx60ZI9d/h9FF+TxNuhTPuHm67Cn31IdNIRIVPlESo2WdKlAshwnLW0v/c1pxkDIjHWcKsEuYc4kQGfynCmkQH+UTU2ZMp/xhShX0vJqgjjmxy9PyRxmyNkpHuNd4EupjSWhD6JbgpctU/1ep+JSHykhc7sq9RVVNEvJAvu/l2AgblxI2lXd5xXpEGlffZJZCVnOlHbIyD6r9WZTKW7uNYffXmj1V9nT8RCmhWWmFbSnAmgaPZiot7XLD09cpLU0d9YwkDWKQ4rc5exa47ts3N10PKYXs0h21l0geUDTjgtmZE7KZ73KJCm+w5cVJYeKGTpcZVVH6G5/mS2sYgdcufumEMHNwZUc1w4Sw4BSce8YGcZEFvBxrwojdVPEZRHZUiFA0VlAeucxotR+1U3CTL9lqhRVLEQXuFmrrwtWpUPW3nBuGcBBJGLtkGPUCahlpDMX75vN2ok+MtEUCnYoeuD1gIHTxy/PfNYsbYwLpNbuu6Q== ural.erkut1@gmail.com
 ```
 
 ![1552595015951](C:\Users\urale\AppData\Roaming\Typora\typora-user-images\1552595015951.png)
+
+[Imgur](https://i.imgur.com/s8CJJdJ.png)
+
+
+
+
 
 > Weiter Infos zu SSH-Keys in Zusammenhang mit GitHub und dem SSH-Agent findet man unter:
 
@@ -413,6 +419,8 @@ Ein GitHub-Account konnte ich problemlos erstellen.
 Mein Git-Client ist aktiv und mein repo wurde auch geklont.
 
 ![Capture](C:\Users\urale\OneDrive - TBZ\Dokumente Modul 300\Capture.PNG)
+
+[Imgur](https://i.imgur.com/dFzVv9T.png)
 
 
 
@@ -626,6 +634,8 @@ root@vagrant-ubuntu-trusty-64:~# sudo apt-get install ubuntu-desktop
 ```
 
 ![1553109943068](C:\Users\urale\AppData\Roaming\Typora\typora-user-images\1553109943068.png)
+
+[Imgur](https://i.imgur.com/NViQnpj.png)
 
 
 
