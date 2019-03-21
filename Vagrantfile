@@ -116,7 +116,7 @@ end
 
 #DHCP VM
 config.vm.define "dhcp" do |dhcp|
-  dhcp.vm.box = "ubuntu/xenial64"
+  dhcp.vm.box = "ubuntu/trusty64"
   dhcp.vm.hostname = "dhcp"
   dhcp.vm.network "private_network", ip:"192.168.5.7" 
   dhcp.vm.provider "virtualbox" do |vb|
@@ -218,7 +218,7 @@ end
 #FTP VM
 #
 config.vm.define "ftp" do |ftp|
-  ftp.vm.box = "ubuntu/xenial64"
+  ftp.vm.box = "ubuntu/trusty64"
   ftp.vm.hostname = "ftp"
   ftp.vm.network "private_network", ip: "192.168.5.8"
   ftp.vm.network "forwarded_port", guest:3306, host:3306, auto_correct: true
