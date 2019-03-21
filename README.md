@@ -1,5 +1,16 @@
 # LB01
 
+## Persönlicher Wissensstand
+
+| Technologie      | Beschreibung                                                 |
+| ---------------- | ------------------------------------------------------------ |
+| Linux            | Ich arbeitete 1 Jahr mit einer Linuxumgebung im meiner Firma. Auch Privat betreibe ich eine Kali Linux Maschine |
+| Virtualisierung  | Ich habe bereits viele virtuelle Maschinen mit einem Hypervisor wie VirtualBox aufgesetzt. Privat sowohl auch in der Schule |
+| Vagrant          | Vagrant habe ich im Modul 300 neu kennengelernt. Ich verstehe was das Prinzip von Vagrant ist. |
+| Git(hub)         | Weil ich Linux kenne, kenne ich auch Git bzw. die Github-Plattform |
+| Markdown         | Seit über einem Jahr schreibe ich viele Dokumentationen und auch Notizen in Markdown. |
+| Systemsicherheit | Einen SSH-Key habe ich im diesen Modul erstellt und kennengelernt. |
+
 # K1
 
 ## Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -643,13 +654,19 @@ Die Basics kenne ich, jedoch habe ich ein "cheat sheet" in .md und werfe ab und 
 
 Diese .md-Datei habe ich ebenfalls in meinem repo hochgeladen.
 
+| Command           | Beschreibung                                                 |
+| ----------------- | ------------------------------------------------------------ |
+| vagrant up        | Startet virtuelle Maschine                                   |
+| vagrant halt      | Stoppt virtuelle Maschine                                    |
+| vagrant destroy   | Zerstört die virtuelle Maschine. Der Source Code und der Inhalt des Data-Verzeichnisses bleiben unverändert. Nur die VirtualBox Maschinen-Instanz wird zerstört. |
+| vagrant provision | Neukonfiguration der virtuellen Maschine nach einer Source Code Änderung. |
+| vagrant reload    | Neuladen der virtuellen Maschine. Nützlich, wenn man die Einstellungen zu dem Netzwerk oder einen synchronisierten Ordner ändern will. |
+
 
 
 ### Eingerichtete Umgebung ist dokumentiert 
 
 Siehe diese .md-Datei.
-
-
 
 # K4
 
@@ -843,6 +860,30 @@ test@dhcp:~$
 # K5
 
 ## Zusätzliche Bewertungspunkte
+
+### Testfälle
+
+| Testfall                                                 | Resultat                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Vom Client (Host PC) auf http://localhost:8080 zugreifen | Funktioniert. Die Default Page des Proxy Servers (192.168.5.6) wird angezeigt |
+| vagrant ssh ural, sudo -i                                | Funktioniert                                                 |
+| ufw status (Firewall und die Rules abchecken)            | root@ural:~# ufw status
+<br/>Status: active
+To                         Action      From
+--                         ------      ----
+22                            ALLOW       10.0.2.2
+
+80/tcp                      ALLOW       Anywhere
+
+Apache                    ALLOW       Anywhere
+
+80/tcp (v6)                ALLOW       Anywhere (v6)
+
+Apache (v6)              ALLOW       Anywhere (v6) |
+
+
+
+
 
 ### Reflexion
 
