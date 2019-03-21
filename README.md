@@ -390,7 +390,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsybLPmHh/P+I1yhzvK+JvqT1Q6ZZyuscPVmoe8fLW
 
 ![1552595015951](C:\Users\urale\AppData\Roaming\Typora\typora-user-images\1552595015951.png)
 
-[Imgur](https://i.imgur.com/s8CJJdJ.png)
+<a href="https://imgur.com/s8CJJdJ"><img src="https://i.imgur.com/s8CJJdJ.png" title="source: imgur.com" /></a>
 
 
 
@@ -420,7 +420,7 @@ Mein Git-Client ist aktiv und mein repo wurde auch geklont.
 
 ![Capture](C:\Users\urale\OneDrive - TBZ\Dokumente Modul 300\Capture.PNG)
 
-[Imgur](https://i.imgur.com/dFzVv9T.png)
+<a href="https://imgur.com/dFzVv9T"><img src="https://i.imgur.com/dFzVv9T.png" title="source: imgur.com" /></a>
 
 
 
@@ -635,9 +635,7 @@ root@vagrant-ubuntu-trusty-64:~# sudo apt-get install ubuntu-desktop
 
 ![1553109943068](C:\Users\urale\AppData\Roaming\Typora\typora-user-images\1553109943068.png)
 
-[Imgur](https://i.imgur.com/NViQnpj.png)
-
-
+[I<a href="https://imgur.com/NViQnpj"><img src="https://i.imgur.com/NViQnpj.png" title="source: imgur.com" /></a>
 
 ### Kennt die Vagrant-Befehle
 
