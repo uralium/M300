@@ -113,6 +113,23 @@ Docker ist eine OpenSource-Software, welches die Bereitstellung von Anwendungen 
 
 Um ein Container auf Docker zu erstellen, muss man ein _Dockerfile_ erstellen (ähnlich wie bei Vagrant). Aber im Gegensatz zu Vagrant enthält es nur einfache Befehle (FROM, COPY, USER, RUN) und kommuniziert mit keinem Hypervisor. Sobald man sein Dockerfile hat, muss das zuerst zu einem Image "gebaut" werden. Anschliessend kann damit ein Container erstellt und gestartet werden. Optional kann man sein Image auch benennen und auf Docker Hub veröffentlichen.
 
+
+
+### Microservices
+
+Man unterscheidet heutzutage zwischen zwei Architekturen:
+
+- Monolithische Architektur
+- Microservice Architektur
+
+Eine monolithische Applikation kann meist nur _horizontal_ erweitert werden (mehr Leistung --> CPU, RAM, Speicher, etc.). Hingegen ein Microservice sich auch über mehrere Host erweitern lässt (_horizontal_). Zudem können bei einer Microservice-Applikation auch nur die einzelnen Services hochskaliert werden.
+
+Bei Applikationen basierend auf Microservices ist die ganze Applikation in verschiedene kleine "Sub-Applikationen" (sog. _Microservices_) aufgeteilt.
+
+Beispielsweise bei einem Online-Shop benötigt es einen Weboberfläche, die Buchhaltung, den Bestand und die Lieferung.
+Diese können nun in 4 Microservices aufgeteilt werden: Weboberfläche, Buchhaltung, Bestand und Lieferung.
+Das führt dazu, dass die Programmierung und Wartung der ganzen Applikation einfacher wird, da das Ganze in 4 Services aufgeteilt wurden. Der Nachteil ist, dass eine Schnittstelle für die Kommunikation zwischen den Microservices benötigt wird und dass die Services auch bei Teil-Ausfällen funktionieren müssen.
+
 <br>
 
 ## K3 - Container
