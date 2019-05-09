@@ -91,10 +91,10 @@ Voraussetzung für Docker und Hyper-V ist, dass man Windows 10 Pro/Education/Ent
 
 ## K2 - Infrastruktur
 
-|        |                                   |
-| ------ | --------------------------------- |
-| GitHub | https://github.com/uralerkut/M300 |
-| Git    | https://git-scm.org/              |
+| Wo        | Link                                                        |
+| --------- | ----------------------------------------------------------- |
+| GitHub    | https://github.com/uralerkut/M300                           |
+| DockerHub | https://cloud.docker.com/repository/docker/uraltbz/m300-lb2 |
 
 <br>
 
@@ -326,11 +326,23 @@ Standardmässig verwendet man `always`, sofern der Container nicht von selbst au
 
 ### 
 
-#### Continuous Integration (CI)
+### Continuous Integration (CI)
 Von _Continuous Integration_ (kurz CI) hatte ich zuvor noch nie etwas gehört. 
 
 Jetzt weiss ich, dass CI (vor allem) für die Entwicklung von Software benutzt wird. Dabei wird an der Software "gebastelt" und danach z. B. auf GitHub hochgeladen. Anschliessend testet ein CI-Programm (z. B. _Jenkins_ oder _Travis CI_) mithilfe eines vordefinierten Scripts die hochgeladene Software. Wird gemäss den Scripts einen Fehler gefunden oder es läuft nicht wie geplant, wird die Software als _failed_ markiert. Verläuft alles positiv, wird es als _passed_ markiert.
 
+
+
+### Image-Bereitstellung
+
+Die wichtigsten Images sind in meinem Docker Hub und GitHub Repo
+
+| Wo        | Link                                                        |
+| --------- | ----------------------------------------------------------- |
+| GitHub    | https://github.com/uralerkut/M300                           |
+| DockerHub | https://cloud.docker.com/repository/docker/uraltbz/m300-lb2 |
+
+<br>
 
 <br>
 
