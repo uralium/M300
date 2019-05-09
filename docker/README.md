@@ -179,7 +179,7 @@ Da alle Container mit einem docker-compose.yml gebaut werden, können alle unter
 <br>
 
 ### Schichtenmodell
-[![M300-LB3-Layer.jpg](https://i.postimg.cc/bN8phW0M/M300-LB3-Layer.jpg)](https://postimg.cc/23HPdHKF)
+[![M300lb2-Layer.jpg](https://i.postimg.cc/yYfqr81b/M300lb2-Layer.jpg)](https://postimg.cc/w7sb1HsX)
 
 Das Schichtenmodell zeigt lediglich den Aufbau von _Docker für Windows_. Zu unterst die Infrastruktur/Hardware, danach ein Betriebssysten, Container Engine/Docker und darauf die Container.
 
