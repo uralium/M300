@@ -1,0 +1,8 @@
+GF_SECURITY_ADMIN_PASSWORD=admin
+GF_USERS_ALLOW_SIGN_UP=false
+GF_SMTP_ENABLED=true
+GF_SMTP_HOST=mta.tam.ch:465
+GF_SMTP_USER=test@example.org
+GF_SMTP_PASSWORD=SecretPassword
+GF_SMTP_FROM_ADDRESS=test@example.org
+GF_SMTP_NAME=Grafana
