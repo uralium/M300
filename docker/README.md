@@ -55,7 +55,7 @@ VS Code, Git-Client, Markdown-Editor und SSH-Keys gleichbleibend.
 | `docker pull`  | Lädt Image aus einer Repository herunter        |
 | `docker push`  | Lädt Image in eine Repository hoch              |
 
-Wenn man `docker` in die Befehlszeile eingibt, erhält man eine Übersicht aller Befehle. \
+Wenn man `docker` in die Befehlszeile eingibt, erhält man eine Übersicht aller Befehle.
 
 **Docker-Compose**
 
@@ -75,7 +75,7 @@ Wenn man `docker-compose` in die Befehlszeile eingibt, erhält man eine Übersic
 
 ### Docker for Windows
 
-Im Gegensatz zu LB2 habe ich mich entschieden, [Docker for Windows](https://www.docker.com/) zu installieren, statt eine Linux-VM mit Docker über Vagrant/Virtualbox laufen zu lassen. \
+Im Gegensatz zu LB1 habe ich mich entschieden, [Docker for Windows](https://www.docker.com/) zu installieren, statt eine Linux-VM mit Docker über Vagrant/Virtualbox laufen zu lassen. 
 Das aus dem simplen Grund, dass alles nur noch komplizierter wird, wenn ich zusätzlich noch eine VM zwischen mir und den Container habe. Ebenfalls habe ich auch schon von den anderen Mitschülern gehört, dass sie mit der Linux-VM und Docker Probleme haben, da sie zusätzlich noch mit der VM klarkommen müssen.
 
 <br>
@@ -189,19 +189,19 @@ Das Schichtenmodell zeigt lediglich den Aufbau von _Docker für Windows_. Zu unt
 Die Umgebungsvariablen werden entweder direkt im `docker-compose.yml` oder in einem `.env`-File definiert. \
 Verwendete Umgebungsvariablen:
 
-| Env-Variable          | Nutzende Container            | Beschreibung                                 |
-| --------------------- | ----------------------------- | -------------------------------------------- |
-| `MYSQL_ROOT_PASSWORD` | `db-nc`, `app-nc`, `db-wp`    | Root-Passwort für die MariaDB-Datenbank      |
-| `MYSQL_PASSWORD`      | `db-nc`, `app-nc`, `db-wp`    | Passwort für den erstellten User             |
-| `MYSQL_DATABASE`      | `db-nc`, `app-nc`, `db-wp`    | Zu erstellende Datenbank                     |
-| `MYSQL_USER`          | `db-nc`, `app-nc`, `db-wp`    | Zu erstellender User                         |
-| `VIRTUAL_HOST`        | `web-nc`, `app-wp`, `app-pma` | Hostname/(Sub-)Domain des Containers (Proxy) |
-| `PMA_HOSTS`           | `app-pma`                     | Datenbanken für phpMyAdmin (Container Namen) |
-| `SSL_SUBJECT`         | `certs`                       | Domain für das Zertifikat                    |
-| `CA_SUBJECT`          | `certs`                       | Antragssteller                               |
-| `SSL_KEY`             | `certs`                       | Speicherort .key-File                        |
-| `SSL_CSR`             | `certs`                       | Speicherort .csr-File                        |
-| `SSL_CERT`            | `certs`                       | Speicherort .crt-File                        |
+| Env-Variable          | Nutzende Container  | Beschreibung                                 |
+| --------------------- | ------------------- | -------------------------------------------- |
+| `MYSQL_ROOT_PASSWORD` | `db-nc`, `app-nc`   | Root-Passwort für die MariaDB-Datenbank      |
+| `MYSQL_PASSWORD`      | `db-nc`, `app-nc`   | Passwort für den erstellten User             |
+| `MYSQL_DATABASE`      | `db-nc`, `app-nc`   | Zu erstellende Datenbank                     |
+| `MYSQL_USER`          | `db-nc`, `app-nc`   | Zu erstellender User                         |
+| `VIRTUAL_HOST`        | `web-nc`, `app-pma` | Hostname/(Sub-)Domain des Containers (Proxy) |
+| `PMA_HOSTS`           | `app-pma`           | Datenbanken für phpMyAdmin (Container Namen) |
+| `SSL_SUBJECT`         | `certs`             | Domain für das Zertifikat                    |
+| `CA_SUBJECT`          | `certs`             | Antragssteller                               |
+| `SSL_KEY`             | `certs`             | Speicherort .key-File                        |
+| `SSL_CSR`             | `certs`             | Speicherort .csr-File                        |
+| `SSL_CERT`            | `certs`             | Speicherort .crt-File                        |
 
 <br>
 
@@ -209,10 +209,11 @@ Verwendete Umgebungsvariablen:
 **Testfall 1: Websites aufrufen** 
 Voraussetzungen: Container sind gestartet.
 
-| Nr.  | Testfall                                   | Erwartet                                        | Effektiv                          |   OK   |
-| :--: | ------------------------------------------ | ----------------------------------------------- | --------------------------------- | :----: |
-| 1.1  | Nextcloud aufrufbar: <br>https://localhost | Seite wird geöffnet <br>Keine 500-Fehlermeldung | Seite wird ohne Probleme geöffnet | **OK** |
-| 1.2  | phpMyAdmin aufrufbar: <br>http://localhost | Seite wird geöffnet <br>Keine 500-Fehlermeldung | Seite wird ohne Probleme geöffnet | **OK** |
+| Nr.  | Testfall                                      | Erwartet                                         | Effektiv                          |   OK   |
+| :--: | --------------------------------------------- | ------------------------------------------------ | --------------------------------- | :----: |
+| 1.1  | Nextcloud aufrufbar: <br>https://localhost    | Seite wird geöffnet <br>Keine 500-Fehlermeldung  | Seite wird ohne Probleme geöffnet | **OK** |
+| 1.2  | phpMyAdmin aufrufbar: <br>http://localhost    | Seite wird geöffnet <br>Keine 500-Fehlermeldung  | Seite wird ohne Probleme geöffnet | **OK** |
+| 1.3  | Grafana aufrufbar: <br/>http://localhost:3000 | Seite wird geöffnet <br/>Keine 500-Fehlermeldung | Seite wird ohne Probleme geöffnet | **OK** |
 
 
 **Testfall 2: Proxy** \
@@ -236,17 +237,12 @@ Aber damit auch E-Mails versendet werden können, muss der SMTP-Server vorher in
 
 Sobald die Container gestartet sind, kann über <http://localhost:3000/> die Oberfläche aufgerufen werden. User und Passwort ist standardmässig `admin`. 
 Anschliessend kann man beispielsweise einen Dashboard öffnen und dort die Auswertungen sehen. Zwar kann man diese über die Benutzeroberfläche bearbeiten, kann sie aber nicht abspeichern. Man muss entweder die Config (wird beim Speichern angezeigt) in die Zwischenablage kopieren, oder speichert es direkt als JSON-Datei ab. Diese Datei wird anschliessend in *./Monitoring/grafana/privisioning/dashboards* gespeichert. \
-In meinem Beispiel habe ich ein neues Dashboard _Custom Dashboard.json_, welches auf _Docker Containers.json_ basiert. Ich habe lediglich noch einen Memory Usage-Panel hinzugefügt und daraus ein Alarm erstellt, sollte die Nutzung die 200MB überschreiten. \
-**HINWEIS**: Damit die E-Mail versendet wird, muss im `config.monitoring` die SMTP-Daten angegeben werden. Ansonsten funktioniert es nicht.
-
-Alle Dateien und Container befinden sich im Ordner Monitoring.
+In meinem Beispiel habe ich ein neues Dashboard _Custom Dashboard.json_, welches auf _Docker Containers.json_ basiert. Ich habe lediglich noch einen Memory Usage-Panel hinzugefügt und daraus ein Alarm erstellt, sollte die Nutzung die 200MB überschreiten. 
 
 <br>
 
 ### Aktive Benachrichtigung
-Wie bereits unter [Service-Überwachung](#Service-Überwachung) beschrieben, habe ich testweise einen Alarm erstellt, welches mir eine E-Mail sendet, sofern die Arbeitsspeicher-Auslastung die 200MB Grenze überschreitet (SMTP-Server muss vorher eingerichtet sein). \
-
-Mit Grafana lässt aber noch viel mehr Benachrichtungen einstellen, wie z. B. Slack-Benachrichtigung, etc. Auch lassen sich diverse Alarme/Benachrichtungen einstellen.
+Wie bereits unter Service-Überwachung beschrieben, habe ich testweise einen Alarm erstellt, welches mir eine E-Mail sendet, sofern die Arbeitsspeicher-Auslastung die 200MB Grenze überschreitet 
 
 <br>
 
@@ -305,7 +301,7 @@ Standardmässig verwendet man `always`, sofern der Container nicht von selbst au
   ```
 
 - Dockerfile (_`USER appuser`_)
-  ```
+  ```docker
   FROM nextcloud:fpm-alpine
 
   RUN addgroup -g 2906 -S appuser && \
@@ -313,13 +309,8 @@ Standardmässig verwendet man `always`, sofern der Container nicht von selbst au
   USER appuser
   ```
 
-<br>
-
-\* Es können nicht alle Container als Non-Root User ausgeführt werden, da diese Zugriff auf Systempfade benötigen (ansonsten erscheint die Fehlermeldung "Permission denied"). Möchte man sie dennoch als normalen User ausführen, müsste man solche Container komplett von Grund auf selber aufbauen. Was aus Zeitgründen in diesem Modul nicht möglich ist.
 
 
-<br>
-<br>
 
 ## K5 - Allgemein
 
@@ -346,11 +337,15 @@ Die wichtigsten Images sind in meinem Docker Hub und GitHub Repo
 <br>
 
 ### Reflexion
-Die ganze LB2 war ziemlich mühsam, das liegt aber unter anderem daran, dass praktisch alles neu war. Bei der LB1 ging es hauptsächlich um Virtuelle Maschinen und deren Automatisierung. Da wir praktisch seit Beginn mit VMs arbeiten, musste ich nur die Automatisierung lernen, was nicht allzu schwer war (Vagrant besteht praktisch nur aus einer Vagrantfile-Datei).
+Da ich einen Vorfall hatte und überhaupt nicht viel Zeit für Docker zur Verfügung gestellt war, konnte ich jedoch ganz knapp eine sehr gute Note rausholen. Zugegeben; ich brauchte sehr viel Hilfe, damit ich in dieser kurze Zeit etwas liefern konnte. Viel Hilfe habe ich auf Reddit, StackOverflow und auch hier in Github geholt und ebenfalls waren einige Dinge copy&paste (z.B Microservices) aber ich finde die Erfahrung und der WissenszuwachsS wichtiger. Für mich geht es darum Docker überhaupt zu verstehen; wofür Docker gut ist und was jedermann kreatives damit anstellen kann. Dieser Zuwachs war in hier in meinem "close run" erstaunlich gut, sprich ich habe den Stoff gut aufnehmen können. Einige Themen waren einfach aufzunehmen (wie ein Schwamm im Wasser) und andere brauchten zahlreiche aktive graue Zellen.
 
-Hingegen bei LB2 musste ich alles von Beginn an lernen, da nicht mehr VMs sondern Container das Hauptthema war. Und zuvor hatte ich noch nie mit Container gearbeitet. Zudem ist Docker und Containerisierung kein einfaches Thema. Zwar gibt es bei Docker auch ein _Dockerfile_-Datei (wie bei Vagrant), aber es besitzt ein anderes Syntax und wird anders gestartet (man baut aus dem Dockerfile zuerst ein Image). 
+Auf jeden Fall bin ich mit meiner Arbeit ziemlich zufrieden!
 
-Zudem kam noch _Docker-Compose_ hinzu, was ich anfangs schon gar nicht verstanden habe. Aber Docker-Compose ist einfach gesagt eine "Erweiterung" von Docker. Damit lassen sich mehrere Container auf einmal erstellen und starten, welche untereinander kommunizieren können. 
+Was Docker angeht: Welten komplizierter als Vagrant. Vagrant ist so: "Komm und erstelle aktive VMs nach Lust und Laune (wenn sie natürlich funktionieren wollen, versteht sich)". Docker hingegen schreit und möchte dich aufmerksam machen, dass die Container die Zukunft sind. Dafür verlangt er einen Dockerfile, oder ein .yml und diese unterscheiden sich deutlich in Bezug auf Aufbau und Syntax. Meiner Meinung nach, ist es auf dem User, das Individuum, abgestimmt, was für ihn nun besser ist. Subjektiv gesehen, gefällt mir das Sparen meines Zeites, wenn man mehrere Container in einem File laufen lässt.
+
+Voll cool!
+
+
 
 
 
